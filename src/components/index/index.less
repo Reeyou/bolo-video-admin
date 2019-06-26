@@ -1,0 +1,117 @@
+@import '../../assets/css/common.less';
+
+.navBar {
+  width: 100%;
+  height: 70px;
+  line-height: 70px;
+  color: @Black;
+  position: fixed;
+  top: 0;
+  div {
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    .logo {
+      width: 160px;
+      height: 70px;
+      float: left;
+      background-image: url(/static/img/logo-black.png);
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      cursor: pointer;
+    }
+    .divide,
+    .home,
+    .home_register {
+      animation: fadein 400ms ease;
+    }
+    .welcome {
+      animation: fadein 100ms ease;
+    }
+    .divide {
+      margin: 0 8px;
+      &:after {
+        content: '';
+        width: 1px;
+        height: 30px;
+        background: @BlackRgb;
+        position: absolute;
+        top: 22px;
+        left: 160px;
+      }
+    }
+    .welcome {
+      font-size: 18px;
+      font-weight: 500;
+      color: @Black;
+    }
+    .home_register {
+      float: right;
+      margin: 0 20px;
+      a {
+        font-size: 14px;
+        font-weight: 500;
+        color: @Black;
+        padding: 8px 30px;
+        border: @borderBlack;
+        border-radius: 3px;
+        transition: all 200ms ease-in-out;
+        -webkit-transition: all 200ms ease-in-out;
+        &:hover {
+          color: @BlackRgb;
+          border: @borderBlackRgb;
+          cursor: pointer;
+        }
+      }
+    }
+    .home {
+      float: right;
+      a {
+        font-size: 14px;
+        font-weight: 500;
+        color: @Black;
+        padding: 8px 30px;
+        border: @borderBlack;
+        border-radius: 3px;
+        transition: all 200ms ease-in-out;
+        -webkit-transition: all 200ms ease-in-out;
+        &:hover {
+          color: @BlackRgb;
+          cursor: pointer;
+          border: @borderBlackRgb;
+        }
+      }
+    }
+  }
+}
+//清除浮动
+.clearFix {
+  clear: both;
+  height: 0;
+  overflow: hidden;
+}
+//导航栏固定
+.fixed {
+  width: 100%;
+  height: 80px;
+  background: #FFF;
+  box-shadow: 0px 0px 1px 0px @BlackRgbO;
+  z-index: 999;
+  animation: fixedFadein 1000ms ease;
+}
+.noFixed {
+  animation: fixedFadeout 1000ms ease;
+}
+
+//内部首页nvHead
+.nvHome {
+  width: 240px;
+  background: #fff;
+  div {
+    width: 100%;
+    margin: 0;
+    .logo {
+      float: none;
+    }
+  }
+}
